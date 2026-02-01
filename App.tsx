@@ -1,7 +1,9 @@
+
 import React from 'react';
 import Header from './components/Header';
 import Experience from './components/Experience';
 import Skills from './components/Skills';
+import Chatbot from './components/Chatbot';
 import { CONTACT_INFO } from './data';
 import { ArrowDown, Activity, Brain, Globe, Users, Linkedin } from 'lucide-react';
 
@@ -108,6 +110,9 @@ const App: React.FC = () => {
             </div>
         </footer>
       </main>
+      
+      {/* Floating Chatbot Assistant */}
+      <Chatbot />
     </div>
   );
 };
