@@ -1,6 +1,6 @@
 import React from 'react';
-import { EXPERIENCE, EDUCATION, RESUME_SUMMARY } from '../data';
-import { Building, GraduationCap, Briefcase, Download } from 'lucide-react';
+import { EXPERIENCE, EDUCATION, RESUME_SUMMARY, CONTACT_INFO } from '../data';
+import { Building, GraduationCap, Briefcase, Linkedin } from 'lucide-react';
 import { Job } from '../types';
 
 const Experience: React.FC = () => {
@@ -35,12 +35,13 @@ const Experience: React.FC = () => {
                 
                 <div className="mt-8">
                      <a 
-                        href="/resume.pdf" 
-                        download="Ty_Tillett_Resume.pdf"
+                        href={`https://${CONTACT_INFO.linkedin}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700 transition-colors"
                      >
-                        <Download className="h-4 w-4 mr-2" />
-                        Download Full Resume
+                        <Linkedin className="h-4 w-4 mr-2" />
+                        View LinkedIn Profile
                      </a>
                 </div>
             </div>
