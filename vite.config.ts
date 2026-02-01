@@ -5,9 +5,13 @@ export default defineConfig({
   plugins: [react()],
   base: '/my-website/',
   define: {
-    // This allows process.env.API_KEY to be accessed in the browser without crashing
     'process.env': {
       API_KEY: JSON.stringify(process.env.API_KEY || '')
     }
+  },
+  build: {
+    outDir: 'dist',
+    assetsDir: 'assets',
+    sourcemap: false
   }
 });
