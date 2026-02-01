@@ -1,9 +1,7 @@
-
 import React from 'react';
 import Header from './components/Header';
 import Experience from './components/Experience';
 import Skills from './components/Skills';
-import Chatbot from './components/Chatbot';
 import { CONTACT_INFO } from './data';
 import { ArrowDown, Activity, Brain, Globe, Users, Linkedin } from 'lucide-react';
 
@@ -38,7 +36,7 @@ const App: React.FC = () => {
                         </div>
 
                         <p className="text-lg text-slate-400 leading-relaxed max-w-xl">
-                            Driving public sector healthcare transformation through data-driven insights, AI innovation, and strategic policy analysis. Bridging the gap between complex regulations and operational excellence.
+                            Driving public sector healthcare transformation through data-driven insights, policy innovation, and strategic analysis. Bridging the gap between complex regulations and operational excellence.
                         </p>
                         
                         <div className="flex flex-wrap gap-4 pt-4">
@@ -110,9 +108,6 @@ const App: React.FC = () => {
             </div>
         </footer>
       </main>
-      
-      {/* Floating Chatbot Assistant */}
-      <Chatbot />
     </div>
   );
 };
