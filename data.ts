@@ -1,3 +1,4 @@
+
 import { Job, Education, Skill } from './types';
 
 export const RESUME_SUMMARY = `
@@ -112,7 +113,6 @@ export const EXPERIENCE: Job[] = [
       "Assisted researchers from across the world through database creation."
     ]
   },
-  // Older internships condensed for brevity in main view but available in data
   {
       id: 'house-reps',
       company: 'U.S. House of Representatives',
@@ -161,31 +161,3 @@ export const SKILLS: Skill[] = [
   { name: "Strategic Planning", category: "Core", level: 94 },
   { name: "Data Analytics", category: "Technical", level: 85 },
 ];
-
-// Constructing a prompt context string for the AI
-export const RESUME_CONTEXT = `
-You are an AI assistant for Ty Tillett. Answer questions based on the following resume information. Be professional, concise, and helpful.
-
-**Profile:**
-Name: ${CONTACT_INFO.name}
-Title: ${CONTACT_INFO.title}
-Location: ${CONTACT_INFO.location}
-Email: ${CONTACT_INFO.email}
-LinkedIn: ${CONTACT_INFO.linkedin}
-
-**Summary:**
-${RESUME_SUMMARY}
-
-**Skills:**
-${SKILLS.map(s => s.name).join(', ')}
-
-**Experience:**
-${EXPERIENCE.map(job => `
-- Role: ${job.title} at ${job.company} (${job.period})
-  Location: ${job.location}
-  Details: ${job.description.join(' ')}
-`).join('\n')}
-
-**Education:**
-${EDUCATION.map(edu => `- ${edu.degree} from ${edu.school} (${edu.year || ''}) ${edu.details || ''}`).join('\n')}
-`;
